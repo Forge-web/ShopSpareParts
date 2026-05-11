@@ -12,7 +12,7 @@ const orders = ref([]);
 
 async function getMyOrders()
 {
-  const response = await fetch(`http://api.flower-shop.com/api/orders/user/${user.value.id}`, {
+  const response = await fetch(`http://api.shop-spare-parts.com/api/orders/user/${user.value.id}`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${user_token.value}`,
@@ -60,7 +60,7 @@ onMounted(async () => {
       <div class="grid grid-cols-1 gap-10">
         <OrderItem 
           v-for="order in orders"
-          :flower_id="Number(order.flower_id)"
+          :spare_parts_id="Number(order.spare_parts_id)"
           :value="Number(order.value)"
           :status="String(order.status)"
         />

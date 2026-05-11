@@ -102,10 +102,8 @@ async function createOrder()
 
         <CartItem v-for="item in items" :key="item.id"
           :item="item"
-        >
-          
-        </CartItem>
-      </div>
+        />
+        </div>
 
       <div>
         <div class="flex flex-col gap-5">
